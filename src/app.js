@@ -16,9 +16,9 @@ mongoose
   .catch(() => {
     console.log(`Error while connecting to DB`);
   });
-app.post("users/register", signup);
-app.post("users/login", login);
-app.use("users/preferences", userPreferenceRouter);
+app.post("/register", signup);
+app.post("/login", login);
+app.use("/preferences", userPreferenceRouter);
 app.use("/news", newsRouter);
 
 app.listen(PORT, () => {
